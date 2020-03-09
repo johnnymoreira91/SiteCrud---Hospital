@@ -1,0 +1,62 @@
+mysql
+
+tabela paciente
+
+idpaciente int not null auto_increment pk
+nome_paciente varchar(60) not null
+endereco varchar(60)
+num_casa int
+idade int
+cpf int
+rg int
+telefone varchar(20)
+
+
+
+tabela medico
+idmedico int not null auto_increment
+nome_medico varchar(60) not null
+especialidade varchar(50)
+crm int
+login_medico varchar(30) not null
+password_medico varchar(30) not null
+
+
+tabela secretaria
+idsecretaria int not null auto_increment
+nome_secretaria varchar(60)
+login_secretaria varchar(30) not null
+password_secretaria varchar(30) not null
+
+tabela consulta
+idconsulta int not null auto_increment pk
+idpaciente int fk
+idmedico int fk
+problema varchar(100)
+
+tabela rh
+idrh int not null auto_increment
+nome_rh varchar(60)
+login_rh varchar(30) not null
+password_rh varchar(30) not null
+
+tabela enfermeira
+idtecnico int not null auto_increment
+nome_enfermeira varchar(60)
+coren int
+login_enfermeira varchar(30) not null
+password_enfermeira varchar(30) not null
+
+tabela tecenfermagem
+idtecnico int not null auto_increment
+nome_tecnico varchar(60)
+coren int
+login_tecnico varchar(30) not null
+password_tecnico varchar(30) not null
+
+
+tabela agenda
+idagenda int not null auto_increment
+data_agenda DATE 
+idpaciente fk
+hora_consulta TIME
