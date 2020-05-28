@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+    <title>Site Doctor / RH</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+    
+    <header class="o-header">
+        <ul>
+            <li><a href="/rh">Home</a></li>
+            <li><a href="/logout">Logoff</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">RH</a>
+                <div class="dropdown-content">
+                  <a href="/consultarrh">Consultar</a>
+                  <a href="/adicionarrh">Adicionar</a>
+                  <a href="/alterarrh">Alterar</a>
+                </div>
+              </li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Medico</a>
+              <div class="dropdown-content">
+                <a href="/consultarmedico">Consultar</a>
+                <a href="/adicionarmedico">Adicionar</a>
+                <a href="/alterarmedico">Alterar</a>
+              </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Enfermeira</a>
+                <div class="dropdown-content">
+                  <a href="/consultarenfermeira">Consultar</a>
+                  <a href="/adicionarenfermeira">Adicionar</a>
+                  <a href="/alterarenfermeira">Alterar</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Tec Enfermeira</a>
+                <div class="dropdown-content">
+                  <a href="/consultartecenfermeira">Consultar</a>
+                  <a href="/adicionartecenfermeira">Adicionar</a>
+                  <a href="/alterartecenfermeira">Alterar</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Secretaria</a>
+                <div class="dropdown-content">
+                  <a href="/consultarsecretaria">Consultar</a>
+                  <a href="/adicionarsecretaria">Adicionar</a>
+                  <a href="/alterarsecretaria">Alterar</a>
+                </div>
+            </li>
+          </ul>
+    </header> 
+    <aside class="o-aside">
+        <img src="../../assets/imagens/medico.jpeg">
+    </aside> 
+    <main class="o-main">
+        <div align="center">
+        <br><br>
+        Insira os dados do Medico a ser adicionado abaixo<br>
+
+        <% if(validacao) { %>
+        
+          <% for(var i = 0; i < validacao.length; i++) { %>
+           
+              <ol>
+                         <%= validacao[i].msg %> 
+              </ol>
+           
+          <% } %>
+  
+         <% } %>
+
+        <form action="/salvarmedico" method="POST">
+           <br><br> <label for="nome_medico">Nome: </label><br>
+            <input type="text" id="nome_medico" name="nome_medico" placeholder="Nome do Medico"><br>
+            <label for="especialidade_medico">Especialidade</label><br>
+            <input type="text" id="especialidade_medico" name="especialidade_medico" placeholder="Especialidade do Médico"><br>
+            <label for="crm">CRM</label><br>
+            <input type="text" id="crm" name="crm" placeholder="Digite o n° do CRM"><br>
+            <label for="salario_medico">Salario</label><br>
+            <input type="text" id="salario_medico" name="salario_medico" placeholder="Digite o Salario do Medico"><br>
+            <label for="login_medico">Login</label><br>
+            <input type="text" id="login_medico" name="login_medico" placeholder="Digite o Login do Medico"><br>
+            <label for="password_medico">Password</label><br>
+            <input type="password" id="password_medico" name="password_medico"><br>
+            <input type="submit" value="Enviar">
+        </form>
+
+        </div>
+    </main> 
+    <footer class="o-footer">
+        ® Doctor 1.0 ™
+    </footer>
+
+</body>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <title>Site Crud</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script>
+   
+   function Login() {
+  var done=0;
+  var usuario = document.getElementsByName('username')[0].value;
+  usuario=usuario.toLowerCase();
+  var senha= document.getElementsByName('password')[0].value;
+  seha=senha.toLowerCase();
+  if (usuario=="rh" && senha=="rh") {
+    window.location="/rh";
+    done=1;
+  }
+  if (done==0) { alert("Dados incorretos, tente novamente"); }
+}
+
+    </script>
+</head>
+
+<body>
+    
+    <header class="o-header">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Info</a>
+              <div class="dropdown-content">
+                <a href="/sobre">Sobre</a>
+                <a href="/versao">Versão</a>
+              </div>
+            </li>
+          </ul>
+    </header> 
+    <aside class="o-aside">
+        <img src="../../assets/imagens/medico.jpeg">
+    </aside> 
+    <main class="o-main">
+        <div align="center">
+                <table width=225 border=1 cellpadding=3 height="123">
+                <tr><td colspan=2 height="13"><center>
+                  <p><font face="Arial Black">Área restrita:</font></p>
+                  </center></td></tr>
+                <tr><td height="22">
+                  <p align="right"><font face="Verdana" style="font-size: 8pt; font-weight:700">
+                  <img border="0" src="../../assets/imagens/icon-user-64.png" width="80" height="80" align="left"></font><p align="right">
+                  <br>
+                  <font face="Verdana" style="font-size: 8pt; font-weight:700">
+                  <br>
+                  Usuário:</font></td>
+                  <td height="22" align="center">
+                  <input type=text name=username size="20"></td></tr>
+                <tr><td height="22">
+                  <p align="right"><font style="font-size: 8pt" face="Verdana">
+                  <b><img border="0" src="../../assets/imagens/icons-password-48.png" align="left" width="80" height="80"><br>
+                  <br>
+                  Senha</b>:</font></td><td height="22">
+                  <input type=text name=password size="20"></td></tr>
+                <tr><td colspan=2 align=center height="26"><input type=button value="Entrar" onClick="Login()"></td></tr>
+                </table>
+                
+        </div>
+    </main> 
+    <footer class="o-footer">
+        ® Doctor 1.0 ™
+    </footer>
+
+</body>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+    <title>Site Doctor / RH</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+    
+    <header class="o-header">
+        <ul>
+            <li><a href="/rh">Home</a></li>
+            <li><a href="/logout">Logoff</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">RH</a>
+                <div class="dropdown-content">
+                  <a href="/consultarrh">Consultar</a>
+                  <a href="/adicionarrh">Adicionar</a>
+                  <a href="/alterarrh">Alterar</a>
+                </div>
+              </li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Medico</a>
+              <div class="dropdown-content">
+                <a href="/consultarmedico">Consultar</a>
+                <a href="/adicionarmedico">Adicionar</a>
+                <a href="/alterarmedico">Alterar</a>
+              </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Enfermeira</a>
+                <div class="dropdown-content">
+                  <a href="/consultarenfermeira">Consultar</a>
+                  <a href="/adicionarenfermeira">Adicionar</a>
+                  <a href="/alterarenfermeira">Alterar</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Tec Enfermeira</a>
+                <div class="dropdown-content">
+                  <a href="/consultartecenfermeira">Consultar</a>
+                  <a href="/adicionartecenfermeira">Adicionar</a>
+                  <a href="/alterartecenfermeira">Alterar</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Secretaria</a>
+                <div class="dropdown-content">
+                  <a href="/consultarsecretaria">Consultar</a>
+                  <a href="/adicionarsecretaria">Adicionar</a>
+                  <a href="/alterarsecretaria">Alterar</a>
+                </div>
+            </li>
+          </ul>
+    </header> 
+    <aside class="o-aside">
+        <img src="../../assets/imagens/medico.jpeg">
+    </aside> 
+    <main class="o-main">
+        <div align="center">
+        <br><br>
+        <div align="center">
+
+          Insira o ID que deseja Deletar<br><br>
+    
+
+          
+
+            <form action="/deletarrh" method="POST">
+                <label for="idrh">ID:</label>
+                <input type="text" id="idrh" name="idrh"><br>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Resetar">
+                
+            </form>
+
+        </div>
+        </div>
+    </main> 
+    <footer class="o-footer">
+        ® Doctor 1.0 ™
+    </footer>
+
+</body>

@@ -82,3 +82,29 @@ li a, .dropbtn {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50; /* Green */
+  font-size: 20px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  margin-top: -8px;
+  text-align: center;
+}
+
+td {
+  border: 1px solid green;
+  border-left-width: 0;
+  min-width: 120px;
+  height: 18px;
+}
+
+td:first-child {
+  border-left-width: 1px;
+}
+
